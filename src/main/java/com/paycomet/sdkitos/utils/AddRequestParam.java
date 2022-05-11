@@ -4,6 +4,13 @@ import com.google.gson.JsonObject;
 
 public class AddRequestParam {
 
+    /**
+     *
+     * @param mRequest
+     * @param amount
+     * @param orderId
+     * @param description
+     */
     public static void addPaymentParams(
             JsonObject mRequest,
             double amount,
@@ -16,6 +23,14 @@ public class AddRequestParam {
         mRequest.addProperty("description", description);
     }
 
+    /**
+     *
+     * @param mRequest
+     * @param transactionId
+     * @param amount
+     * @param orderId
+     * @param description
+     */
     public static void addRefundParams(
             JsonObject mRequest,
             String transactionId,

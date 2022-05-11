@@ -132,6 +132,10 @@ public class ItosApiClient {
         }
     }
 
+    /**
+     * This request initializes the ITOS Payment Services components. This call is necessary to be done at least once before any Financial Transactions are carried out in the terminal, otherwise during the Financial Transaction request the servicies will return the error PINPAD NOT INITIALIZED.
+     * @param callback
+     */
     public void init(
             ItosCallbacks.OnItosResponse callback
     ) {
@@ -157,6 +161,13 @@ public class ItosApiClient {
                         });
     }
 
+    /**
+     * This request initiates a Payment Transaction.
+     * @param amount
+     * @param orderId
+     * @param description
+     * @param callback
+     */
     public void payment(
             double amount,
             String orderId,
@@ -186,6 +197,14 @@ public class ItosApiClient {
                         });
     }
 
+    /**
+     * This request initiates a Refund transaction.
+     * @param transactionId
+     * @param amount
+     * @param orderId
+     * @param description
+     * @param callback
+     */
     public void refund(
             String transactionId,
             double amount,
@@ -216,6 +235,10 @@ public class ItosApiClient {
                         });
     }
 
+    /**
+     * This request returns a copy of the responce data of the last transaction carried out in the system.
+     * @param callback
+     */
     public void getLastTransaction(
             ItosCallbacks.OnItosTransactionsResponse callback
     ) {
@@ -239,6 +262,10 @@ public class ItosApiClient {
                         });
     }
 
+    /**
+     * This request cancels the ongoing transaction.
+     * @param callback
+     */
     public void cancel(
             ItosCallbacks.OnItosResponse callback
     ) {
@@ -262,6 +289,10 @@ public class ItosApiClient {
                         });
     }
 
+    /**
+     * This request prints a copy of the last completed transaction carried out in the system.
+     * @param callback
+     */
     public void printLastTransaction(
             ItosCallbacks.OnItosResponse callback
     ) {

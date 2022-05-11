@@ -15,16 +15,29 @@ public class ItosResponse {
 
     public ItosResponse() { }
 
+    /**
+     *
+     * @param resultCode
+     * @param resultMessage
+     */
     public ItosResponse(double resultCode, String resultMessage) {
         this.resultCode = resultCode;
         this.resultMessage = resultMessage;
     }
 
+    /**
+     *
+     * @param itosPostInit
+     */
     public ItosResponse(ItosResponse itosPostInit) {
         this.resultCode = itosPostInit.getResultCode();
         this.resultMessage = itosPostInit.getResultMessage();
     }
 
+    /**
+     *
+     * @param itosPostPayment
+     */
     public ItosResponse(ItosTransaction itosPostPayment) {
         this.resultCode = itosPostPayment.getResultCode();
         this.resultMessage = itosPostPayment.getResultMessage();

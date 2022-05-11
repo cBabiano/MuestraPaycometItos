@@ -30,11 +30,11 @@ public interface ItosApi {
 
     // LAST TRANSACTION
     @GET("/v1/transactions/cancel")
-    Observable<ItosTransaction> getCancelTransactions(@Header("X-SOURCE") String xsource); // TODO no se que response tiene
+    Observable<ItosTransaction> getCancelTransactions(@Header("X-SOURCE") String xsource);
 
     // PRINT LAST TRANSACTION
     @GET("/v1/transactions/last/print")
-    Observable<ItosTransaction> getPrintLastTransaction(@Header("X-SOURCE") String xsource); // TODO no se que response tiene
+    Observable<ItosTransaction> getPrintLastTransaction(@Header("X-SOURCE") String xsource);
 
 
 }
